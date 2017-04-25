@@ -1,0 +1,11 @@
+[info]
+title=Calc Expression
+desc=Gets selected math expression, e.g. "2.4 * sin(pi/3)", calculates it, replaces selection with result
+type=py-plugin
+subdir=syn_calc_expr
+homepage=
+
+[ini1]
+section=Commands
+id=Calc Expression
+params=replace
