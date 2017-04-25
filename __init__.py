@@ -38,6 +38,12 @@ def do_eval(s):
 
 class Command:
     def replace(self):
+        self.do_work('rep')
+
+    def show(self):
+        self.do_work('show')
+
+    def do_work(self, mode):
         s = ed.get_text_sel()
         if not s: return
 
@@ -47,7 +53,11 @@ class Command:
             msg_status('CalcExpr: eval error')
             return
 
-        npos, nlen = ed.get_sel()
-        ed.set_caret_pos(npos)
-        ed.replace(npos, nlen, s)
-        msg_status('CalcExpr: replaced to "%s"' %s)
+        if mode=='rep':
+            npos, nlen = ed.get_sel()
+            ed.set_caret_pos(npos)
+            ed.replace(npos, nlen, s)
+            msg_status('CalcExpr: replaced to: %s' %s)
+
+        if mode=='show':
+            msg_status('CalcExpr: result: %s' %s)

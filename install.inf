@@ -7,5 +7,10 @@ homepage=
 
 [ini1]
 section=Commands
-id=Calc Expression
+id=Calc Expression\Calc selection, replace
 params=replace
+
+[ini2]
+section=Commands
+id=Calc Expression\Calc selection, show in status
+params=show
