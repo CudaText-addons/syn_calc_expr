@@ -1,4 +1,5 @@
 import math
+import time
 from sw import *
 
 safe_dict = {
@@ -61,3 +62,5 @@ class Command:
 
         if mode=='show':
             msg_status('CalcExpr: result: %s' %s)
+            time.sleep(1) #for toolbar
+

@@ -1,3 +1,6 @@
 
+2017.04.26
++ time.sleep for show command
+
 2017.04.25
 init
